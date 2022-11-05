@@ -8,6 +8,7 @@ async function getTemperature (){
     console.log(data.list);
 
     const labels = [
+      '3am',
       '6am',
       '9am',
       '12pm',
@@ -15,8 +16,7 @@ async function getTemperature (){
       '6pm',
       '9pm',
       '12am',
-      '3am',
-      '6am'
+      '3am'
     ];
     
     const chartData = {
@@ -24,7 +24,7 @@ async function getTemperature (){
       datasets: [{
         label: 'Temperature / ° C',
         backgroundColor:[
-          'rgb(116, 174, 29)',
+          '#fadb0f',
         ], 
         data: [ 
         data.list[0].main.temp, 

@@ -8,6 +8,7 @@ async function getHumidity (){
     console.log(data.list);
 
 const labels = [  
+  '3am',
   '6am',
   '9am',
   '12pm',
@@ -16,7 +17,6 @@ const labels = [
   '9pm',
   '12am',
   '3am',
-  '6am',
 ];
 
 const chartData = {

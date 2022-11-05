@@ -10,15 +10,15 @@ async function getWind (){
 
 
 const labels = [
+  '3am',
   '6am',
   '9am',
   '12pm',
   '3pm',
   '6pm',
   '9pm',
-  '12am',
+  '12pm',
   '3am',
-  '6am',
 ];
 
 const chartData = {
