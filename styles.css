@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    width: 82vw;
+    height: 470px;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./imgs/pic.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+aside{
+    width: 18vw;
+    height: 100vh;
+    padding: 10px;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    color: black;
+}
+
+.nav-btn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+a{
+    margin: 2px;
+    text-decoration: none;
+    padding: 15px 45px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-temp{
+    background-color: rgb(250, 127, 33);
+    color: white;
+    border: 1px solid  black;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.btn-temp:hover{
+    background-color: rgb(116, 174, 29);
+    border: 1px solid  black;
+}
+
+.time{
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 11px;
+}
+
+h3{
+    font-size: 27px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.canvas-container{
+    display: flex;
+    width: 300px;
+}
+
+canvas {
+    min-height: 425px;
+    padding: 20px;
+}
+
+section{
+    height: 350px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.currentweather-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 200px;
+    height: 300px;
+}
+
+.currentweather-title{
+    width: 110px;
+    height: 200px;
+    background-color: rgba(250, 127, 33, 0.611) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.currentweather-logos{
+    height: 100px;
+}
+
+h4{
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.p-temp{
+    text-align: center;
+    padding: 7px;
+    font-size: 32px;
+    margin-top: 15px;
+}
+
+/* NOTE Scren 480px */
+
+@media screen and (max-width:480px){
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }    
+
+header{
+    width: 100vw;
+    height: 470px;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./imgs/pic.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+aside{
+    height: 100vh;
+    padding: 10px;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    color: black;
+}
+
+
+
+
+
+}

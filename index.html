@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>DallasWeather</title>
+</head>
+<body>
+
+  <div class="container">
+    <aside>
+      <h2>Weather DashBoard</h2>
+      <div class="nav-btn">
+        <a class="btn-temp" href="./forescast.html">24H Forescast</a>
+      </div>
+      <div class="time">
+        <p>Local time <br>
+          <span id='date-time'></span>.</p>
+      </div>
+    </aside>
+    <main>
+      <header>
+        <h1>DALLAS</h1>
+        <h2>Texas</h2>
+      </header>
+      <article>
+
+        <h3>Current Condition</h3>
+
+        <section>
+          <div class="currentweather-box">
+            <div class="currentweather-title">
+              <img class="currentweather-logos" src="./imgs/temp.svg" alt="tempLogo">
+
+              <h4>Temperature</h4>
+
+            </div>
+            <p id="currenTemp" class="p-temp"></p>
+          </div>
+          <div class="currentweather-box">
+            <div class="currentweather-title">
+              <img class="currentweather-logos" src="./imgs/weather.svg" alt="tempLogo">
+
+              <h4>Weather</h4>
+
+            </div>
+            <p id="currentWeather" class="p-temp"></p>
+          </div>
+          <div class="currentweather-box">
+            <div class="currentweather-title">
+              <img class="currentweather-logos" src="./imgs/humidity.svg" alt="tempLogo">
+
+              <h4>Humidity</h4>
+
+            </div>
+            <p id="currentHumidity" class="p-temp"></p>
+          </div>
+          <div class="currentweather-box">
+            <div class="currentweather-title">
+              <img class="currentweather-logos" src="./imgs/wind.svg" alt="tempLogo">
+
+              <h4>Wind</h4>
+
+            </div>
+            <p id="currentWind" class="p-temp"></p>
+          </div>
+        </section>
+
+      </article>
+    </main> 
+  </div>
+
+  <script src="./current.js"></script>
+  <script>
+    var dt = new Date();
+    document.getElementById('date-time').innerHTML=dt;
+  </script>
+</body>
+</html>
