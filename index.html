@@ -1,87 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
-  <title>DallasWeather</title>
-</head>
-<body>
-
-  <div class="container">
-    <aside>
-      <div class="container-logo">
-        <img class="logo-weather" src="./imgs/logoweather.SVG" alt="logoapp">
-        <p class="p-logo">Weather DashBoard</p>
-      </div>
-      <div class="nav-btn">
-        <a class="btn-temp" href="./forecast.html">Tomorrow Forecast</a>
-      </div>
-      <div class="time">
-        <p>Local time <br>
-          <span id='date-time'></span>.</p>
-      </div>
-    </aside>
-    <main>
-      <header>
-        <h1>DALLAS</h1>
-        <h2>Texas</h2>
-      </header>
-      <article>
-
-        <h3>Current Condition</h3>
-
-        <section>
-          <div class="currentweather-box">
-            <div class="currentweather-title">
-              <img class="currentweather-logos" src="./imgs/temp.SVG" alt="tempLogo">
-
-              <h4>Temperature</h4>
-
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous" />
+        <title>DallasWeather</title>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <img
+                            src="./imgs/logoweather.SVG"
+                            alt="Logo"
+                            width="70"
+                            height="70"
+                            class="d-inline-block align-text-top" />
+                        <span> DallasWeather </span>
+                    </div>
+                    <div>
+                        <a class="btn" href="./forecast.html"> Next 24H </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="card text-bg-dark text-center">
+                <img src="./imgs/dallas.JPG" class="card-img" alt="dallaspic" />
+                <div class="card-img-overlay">
+                    <h1 class="card-title">
+                        Dallas
+                        <br />
+                        Texas
+                    </h1>
+                </div>
             </div>
-            <p id="currenTemp" class="p-temp"></p>
-          </div>
-          <div class="currentweather-box">
-            <div class="currentweather-title">
-              <img class="currentweather-logos" src="./imgs/weather.SVG" alt="tempLogo">
-
-              <h4>Weather</h4>
-
+            <div>
+                <h3 class="mt-3">
+                    Current Weather
+                    <br />
+                    <span
+                        class="badge bg-secondary text-time"
+                        id="date-time"></span>
+                </h3>
             </div>
-            <p id="currentWeather" class="p-temp"></p>
-          </div>
-          <div class="currentweather-box">
-            <div class="currentweather-title">
-              <img class="currentweather-logos" src="./imgs/Humidity.SVG" alt="tempLogo">
 
-              <h4>Humidity</h4>
-
+            <div class="row row-cols-1 row-cols-md-4 g-4 mt-2 mb-2">
+                <div class="col">
+                    <div class="card text-center">
+                        <img
+                            src="./imgs/temp.svg"
+                            class="card-img-top logo-weather ms-auto me-auto"
+                            alt="temperatureLogo" />
+                        <div class="card-body">
+                            <h4 class="card-title">Temperature</h4>
+                            <p class="card-text">
+                                <span id="currenTemp"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center">
+                        <img
+                            src="./imgs/conditions.svg"
+                            class="card-img-top ms-auto me-auto logo-weather"
+                            alt="weatherLogo" />
+                        <div class="card-body">
+                            <h4 class="card-title">Conditions</h4>
+                            <p class="card-text">
+                                <span id="currentWeather"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center">
+                        <img
+                            src="./imgs/humidity.svg"
+                            class="card-img-top ms-auto me-auto logo-weather"
+                            alt="HumidityLogo" />
+                        <div class="card-body">
+                            <h4 class="card-title">Humidity</h4>
+                            <p class="card-text">
+                                <span id="currentHumidity"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center">
+                        <img
+                            src="./imgs/wind.SVG"
+                            class="card-img-top ms-auto me-auto logo-weather"
+                            alt="windLogo" />
+                        <div class="card-body">
+                            <h4 class="card-title">Wind</h4>
+                            <p class="card-text">
+                                <span id="currentWind"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p id="currentHumidity" class="p-temp"></p>
-          </div>
-          <div class="currentweather-box">
-            <div class="currentweather-title">
-              <img class="currentweather-logos" src="./imgs/wind.SVG" alt="tempLogo">
+        </div>
 
-              <h4>Wind</h4>
-
-            </div>
-            <p id="currentWind" class="p-temp"></p>
-          </div>
-        </section>
-
-      </article>
-    </main> 
-  </div>
-
-  <script src="./current.js"></script>
-  <script>
-    var dt = new Date();
-    document.getElementById('date-time').innerHTML=dt;
-  </script>
-</body>
+        <script src="./current.js"></script>
+        <script>
+            var dt = new Date()
+            document.getElementById("date-time").innerHTML = dt
+        </script>
+    </body>
 </html>

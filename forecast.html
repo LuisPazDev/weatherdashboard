@@ -1,54 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-    <title>DallasWeather</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous" />
+        <title>DallasWeather</title>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <img
+                            src="./imgs/logoweather.SVG"
+                            alt="Logo"
+                            width="70"
+                            height="70"
+                            class="d-inline-block align-text-top" />
+                        <span> DallasWeather </span>
+                    </div>
+                    <div>
+                        <a class="btn" href="./index.html"> Current </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="card text-bg-dark text-center">
+                <img src="./imgs/dallas.JPG" class="card-img" alt="dallaspic" />
+                <div class="card-img-overlay">
+                    <h1 class="card-title">
+                        Dallas
+                        <br />
+                        Texas
+                    </h1>
+                </div>
+            </div>
+            <div>
+                <h3 class="mt-2">24H Forecast</h3>
+            </div>
 
-  <div class="container">
-    <aside>
-      <div class="container-logo">
-        <img class="logo-weather" src="./imgs/logoweather.SVG" alt="logoapp">
-        <p class="p-logo">Weather DashBoard</p>
-      </div>
-      <div class="nav-btn">
-        <a class="btn-temp" href="./index.html">Current Condition</a>
-      </div>
-      <div class="time">
-        <p>Local time <br>
-          <span id='date-time'></span>.</p>
-      </div>
-    </aside>
-    <main>
-      <header>
-        <h1>DALLAS</h1>
-        <h2>Texas</h2>
-      </header>
-      <article>
-        <h3>Tomorrow Forecast</h3>
-        <div class="canvas-container inactive">
-          <canvas id="myChartTemperature"></canvas>
-          <canvas id="myChartHumidity"></canvas>
-          <canvas id="myChartWind"></canvas>
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-1 mb-2">
+                <div class="col">
+                    <canvas
+                        class="ms-auto me-auto"
+                        id="myChartTemperature"></canvas>
+                </div>
+                <div class="col">
+                    <canvas
+                        class="ms-auto me-auto"
+                        id="myChartHumidity"></canvas>
+                </div>
+                <div class="col">
+                    <canvas class="ms-auto me-auto" id="myChartWind"></canvas>
+                </div>
+            </div>
         </div>
-      </article>
-    </main> 
-  </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./temperature.js"></script>
-    <script src="./humidity.js"></script>
-    <script src="./wind.js"></script>
-    <script>
-      var dt = new Date();
-      document.getElementById('date-time').innerHTML=dt;
-    </script>
-</body>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./temperature.js"></script>
+        <script src="./humidity.js"></script>
+        <script src="./wind.js"></script>
+        <script>
+            var dt = new Date()
+            document.getElementById("date-time").innerHTML = dt
+        </script>
+    </body>
 </html>
