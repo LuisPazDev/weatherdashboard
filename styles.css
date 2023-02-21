@@ -55,8 +55,8 @@ h3 {
 
 canvas {
     min-height: 350px;
-    max-width: 300px;
-    padding: 5px;
+    max-width: 250px;
+    padding: 10px;
 }
 
 h4 {
